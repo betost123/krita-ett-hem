@@ -32,3 +32,12 @@ export const salesItemsData: Array<SalesItem> = [
     liked: false,
   },
 ];
+
+export const featuredElementSlideOne = {
+  image:
+    "https://img.made.com/image/upload/c_pad,d_madeplusgrey.svg,dpr_2,f_auto,q_auto:good,w_700/v1/mws-critical/e32209b9-cbbc-4fcc-a65f-5d596a593bc8_LIGHTING_HP_FEATURED_CONTENT_POD_Pink.jpg",
+  title: "MADE mood lighting",
+  description:
+    "Whether you want to switch off and relax, or create a source of positive energy, we have lighting that’ll set the perfect mood at home – from statement ceiling pendants, to contemporary table lamps.",
+  buttonText: "Shop now",
+};

@@ -4,9 +4,9 @@ import { LogoIconBig } from "../icons/logo";
 import H4 from "./Typography/H4";
 
 const NavBarContainer = styled.div`
-  height: 90px;
+  height: 60px;
   width: 100vw;
-  background-image: linear-gradient(#00000055, white);
+  background-image: linear-gradient(#b9c0f8, white);
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
