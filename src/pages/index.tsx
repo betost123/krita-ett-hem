@@ -5,6 +5,8 @@ import HeroBanner from "../components/HeroBanner";
 import styled from "styled-components";
 import { salesItemsData } from "../utils/data";
 import SaleItemCard from "../components/SaleItemCard";
+import { Col, Row } from "react-grid-system";
+import { ScaleIn } from "../components/animations/ScaleIn";
 
 const Container = styled.div`
   padding: 1rem;
@@ -20,22 +22,25 @@ const IndexPage = () => {
   return (
     <div>
       <Container>
-        <SaleItemsRow>
+        <Row gutterWidth={16}>
           {salesItemsData.map((item) => (
-            <SaleItemCard
-              key={item.id}
-              image={item.image}
-              title={item.title}
-              id={item.id}
-              cost={item.cost}
-              liked={item.liked}
-              campaign={item.campaign}
-              sale={item.sale}
-            />
+            <Col md={4} xs={6}>
+              <ScaleIn>
+                <SaleItemCard
+                  key={item.id}
+                  image={item.image}
+                  title={item.title}
+                  id={item.id}
+                  cost={item.cost}
+                  liked={item.liked}
+                  campaign={item.campaign}
+                  sale={item.sale}
+                />
+              </ScaleIn>
+            </Col>
           ))}
-        </SaleItemsRow>
+        </Row>
       </Container>
-      <HeroBanner imageUrl='https://cdn.shopify.com/s/files/1/1149/3532/products/honeydew-splatter-1286_1184x768.jpg?v=1645479417' />
     </div>
   );
 };

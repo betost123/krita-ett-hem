@@ -12,7 +12,7 @@ const TypographyStyle = styled.h1<{ color?: string; textAlign?: string }>`
   text-align: ${(props) => props.textAlign ?? "left"};
 
   ${MediaQuery.TABLET} {
-    font-size: 18px;
+    font-size: 10px;
   }
 `;
 

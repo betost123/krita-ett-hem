@@ -1,6 +1,7 @@
 import * as React from "react";
 import { createGlobalStyle } from "styled-components";
 import NavBar from "./NavBar";
+import CursorStandard from "../images/cursors/cursor-standard.svg";
 
 interface LayoutProps {
   children: any;
@@ -21,10 +22,12 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
 
   return (
     <React.Fragment>
-      <NavBar />
-      <GlobalStyle />
+      <div style={{ cursor: `url(${CursorStandard}), auto` }}>
+        <NavBar />
+        <GlobalStyle />
 
-      {children}
+        {children}
+      </div>
     </React.Fragment>
   );
 };

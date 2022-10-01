@@ -2,9 +2,11 @@ import * as React from "react";
 import styled from "styled-components";
 import { HeartIcon } from "../icons/HeartIcon";
 import { PriceModel } from "../utils/models";
+import { MediaQuery } from "../utils/styling-helprs";
 import ActionText from "./Typography/ActionText";
 import H4 from "./Typography/H4";
 import InfoText from "./Typography/InfoText";
+import HoverCursor from "../images/cursors/hover-cursor.svg";
 
 interface SaleItemCardProps {
   image: string;
@@ -17,9 +19,13 @@ interface SaleItemCardProps {
 }
 
 const Image = styled.img`
-  width: 420px; //TODO: put size in cols
-  height: 550px;
+  width: 100%;
+  height: 450px;
   object-fit: cover;
+
+  ${MediaQuery.TABLET} {
+    height: 300px;
+  }
 `;
 
 const Container = styled.div`
@@ -49,7 +55,11 @@ const IconButtonStyle = styled.button`
 
 const FlagContainer = styled.div<{ bgColor: string }>`
   background-color: ${(props) => props.bgColor};
-  padding: 0.25rem 2rem 0.25rem 0.5rem;
+  padding: 0.5px 2rem 0.5px 1px;
+
+  ${MediaQuery.TABLET} {
+    padding: 0.25px 1rem 0.25px 0.25px;
+  }
 `;
 
 const FlagsSections = styled.div`
@@ -75,7 +85,10 @@ const SaleItemCard: React.FunctionComponent<SaleItemCardProps> = ({
       <Image src={image} alt={`Sale item ${title}`} />
 
       <HeartIconContainer>
-        <IconButtonStyle onClick={onClickSave}>
+        <IconButtonStyle
+          onClick={onClickSave}
+          style={{ cursor: `url(${HoverCursor}), auto` }}
+        >
           <HeartIcon color={isLiked ? "#E87A83" : "black"} />
         </IconButtonStyle>
       </HeartIconContainer>
@@ -93,7 +106,7 @@ const SaleItemCard: React.FunctionComponent<SaleItemCardProps> = ({
         )}
       </FlagsSections>
 
-      <InfoContainer>
+      <InfoContainer style={{ cursor: `url(${HoverCursor}), auto` }}>
         <InfoText color='#385772'>{title}</InfoText>
         <H4 color='#385772'>
           {cost.cost}

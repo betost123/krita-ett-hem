@@ -5,12 +5,12 @@ import { MediaQuery } from "../../utils/styling-helprs";
 
 const TypographyStyle = styled.h1<{ color?: string; textAlign?: string }>`
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   color: ${(props) => props.color ?? "black"};
   text-align: ${(props) => props.textAlign ?? "left"};
 
   ${MediaQuery.TABLET} {
-    font-size: 18px;
+    font-size: 14px;
   }
 `;
 
