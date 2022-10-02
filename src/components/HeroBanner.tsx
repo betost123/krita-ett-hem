@@ -1,5 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
+import { ScaleIn } from "./animations/ScaleIn";
+import { SlideinFromBottom } from "./animations/SlideInFromBottom";
 import Title from "./Typography/Title";
 
 interface HeroBannerProps {
@@ -11,7 +13,7 @@ const StyledContainer = styled.div`
   height: 60vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-end;
   position: relative;
 `;
 
@@ -30,18 +32,21 @@ const Image = styled.img`
 
 const TextSection = styled.div`
   padding: 1rem;
-  z-index: 5;
 `;
 
 const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({ imageUrl }) => {
   return (
     <StyledContainer>
       <ImageWrapper>
-        <Image src={imageUrl} />
+        <ScaleIn>
+          <Image src={imageUrl} />
+        </ScaleIn>
       </ImageWrapper>
-      <TextSection>
-        <Title>Krita Ett Hem</Title>
-      </TextSection>
+      <SlideinFromBottom delay={0.5}>
+        <TextSection>
+          <Title color='white'>Krita Ett Hem</Title>
+        </TextSection>
+      </SlideinFromBottom>
     </StyledContainer>
   );
 };

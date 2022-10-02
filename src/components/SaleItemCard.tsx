@@ -7,6 +7,7 @@ import ActionText from "./Typography/ActionText";
 import H4 from "./Typography/H4";
 import InfoText from "./Typography/InfoText";
 import HoverCursor from "../images/cursors/hover-cursor.svg";
+import IconButton from "./IconButton";
 
 interface SaleItemCardProps {
   image: string;
@@ -46,13 +47,6 @@ const HeartIconContainer = styled.div`
   right: 1rem;
 `;
 
-const IconButtonStyle = styled.button`
-  background-color: transparent;
-  border-width: 0;
-  border-radius: 50%;
-  padding: 8px;
-`;
-
 const FlagContainer = styled.div<{ bgColor: string }>`
   background-color: ${(props) => props.bgColor};
   padding: 0.5px 2rem 0.5px 1px;
@@ -85,12 +79,10 @@ const SaleItemCard: React.FunctionComponent<SaleItemCardProps> = ({
       <Image src={image} alt={`Sale item ${title}`} />
 
       <HeartIconContainer>
-        <IconButtonStyle
+        <IconButton
+          icon={<HeartIcon color={isLiked ? "#E87A83" : "black"} />}
           onClick={onClickSave}
-          style={{ cursor: `url(${HoverCursor}), auto` }}
-        >
-          <HeartIcon color={isLiked ? "#E87A83" : "black"} />
-        </IconButtonStyle>
+        />
       </HeartIconContainer>
 
       <FlagsSections>

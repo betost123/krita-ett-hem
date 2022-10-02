@@ -41,3 +41,30 @@ export const featuredElementSlideOne = {
     "Whether you want to switch off and relax, or create a source of positive energy, we have lighting that’ll set the perfect mood at home – from statement ceiling pendants, to contemporary table lamps.",
   buttonText: "Shop now",
 };
+
+export const promoSlideCards = [
+  {
+    image:
+      "https://www.societyoflifestyle.com/wp-content/uploads/2021/01/sol-gourmeasy-3.jpg",
+    title: "Cooking @ Home",
+    id: "6747839fbdjhnkm",
+  },
+  {
+    image:
+      "https://www.societyoflifestyle.com/wp-content/uploads/2021/03/Society-of-Lifestyle-Meraki-new-hair-care-volumising-shampoo.jpg",
+    title: "Cleansing Extra",
+    id: "fbcjek74fhejkw9",
+  },
+  {
+    image:
+      "https://cdn.shopify.com/s/files/1/0640/8921/files/IMG_1130_Kopie_480x480.jpg?v=1656503179",
+    title: "Open Spaces Design",
+    id: "ncjdk84wsbhj12",
+  },
+  {
+    image:
+      "https://assets.hermes.com/is/image/hermesproduct/carrying-bag-for-dogs--800639EK01-worn-1-0-0-1600-1600-q99_b.jpg",
+    title: "Dog Accessories",
+    id: "fnjk8943dwkhj32",
+  },
+];

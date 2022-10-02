@@ -12,9 +12,9 @@ interface ButtonProps {
 const SecondaryButton = styled.button`
   padding: 0.5rem 3rem;
   border-radius: 2rem;
-  border-color: black;
+  border-color: white;
   border-width: 1px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(300, 300, 300, 0.3);
   width: 100%;
   cursor: pointer;
 `;
@@ -58,8 +58,11 @@ const Button: React.FunctionComponent<ButtonProps> = ({
           <ButtonText color='#385772'>{children}</ButtonText>
         </TetriaryButton>
       ) : (
-        <SecondaryButton onClick={onClick}>
-          <ButtonText>{children}</ButtonText>
+        <SecondaryButton
+          onClick={onClick}
+          style={{ cursor: `url(${HoverCursor}), auto` }}
+        >
+          <ButtonText color='white'>{children}</ButtonText>
         </SecondaryButton>
       )}
     </>

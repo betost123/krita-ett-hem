@@ -1,10 +1,10 @@
 import * as React from "react";
 
-interface HeartIconProps {
+interface IconProps {
   color?: string;
 }
 
-export const HeartIcon: React.FunctionComponent<HeartIconProps> = ({
+export const HeartIcon: React.FunctionComponent<IconProps> = ({
   color = "black",
 }) => (
   <svg
